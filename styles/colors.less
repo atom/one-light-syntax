@@ -1,37 +1,29 @@
 
 // Config -----------------------------------
-@syntax-hue:          220;
-@syntax-saturation:   0.1%;
+@syntax-hue:          230;
+@syntax-saturation:    1%;
 @syntax-brightness:   98%;
 
 // Base colors -----------------------------------
-@syntax-base-accent-color:      hsl(@syntax-hue, 100%, 66% );
-@syntax-base-background-color:  hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
-@syntax-base-text-color:        @dark-gray;
-@syntax-base-guide-color:       fade(@syntax-base-text-color, 40%);
+@syntax-accent: hsl(@syntax-hue, 100%, 66% );
+@syntax-guide:  fade(@syntax-fg, 20%);
+@syntax-fg:     @mono-1;
+@syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 
 
-// Colors: Mix Base16 Atelier Dune with Theme hue -----------------------------------
-@syntax-mix-grey:    -12%;
-@syntax-mix-color:    16%;
-@syntax-mix-contrast: 12%;
+// Monochrome -----------------------------------
+@mono-1: hsl(@syntax-hue, 8%, 24%);
+@mono-2: hsl(@syntax-hue, 6%, 44%);
+@mono-3: hsl(@syntax-hue, 4%, 64%);
 
-// Grayscale
-@black:           darken( saturate( #20201d, @syntax-mix-grey ), @syntax-mix-contrast ); // 00
-@light-black:     darken( saturate( #292824, @syntax-mix-grey ), @syntax-mix-contrast ); // 01
-@very-dark-gray:  darken( saturate( #6e6b5e, @syntax-mix-grey ), @syntax-mix-contrast ); // 02
-@dark-gray:       darken( saturate( #7d7a68, @syntax-mix-grey ), @syntax-mix-contrast ); // 03
-@gray:            darken( saturate( #999580, @syntax-mix-grey ), @syntax-mix-contrast ); // 04
-@light-gray:      darken( saturate( #a6a28c, @syntax-mix-grey ), @syntax-mix-contrast ); // 05
-@very-light-gray: darken( saturate( #e8e4cf, @syntax-mix-grey ), @syntax-mix-contrast ); // 06
-@white:           darken( saturate( #fefbec, @syntax-mix-grey ), @syntax-mix-contrast ); // 07
+// Colors -----------------------------------
+@hue-1:   hsl(198, 99%, 37%); // <-cyan
+@hue-2:   hsl(221, 87%, 60%); // <-blue
+@hue-3:   hsl(301, 63%, 40%); // <-purple
+@hue-4:   hsl(119, 34%, 47%); // <-green
 
-// Colors
-@red:             darken( saturate( #d73737, @syntax-mix-color ), @syntax-mix-contrast ); // 08
-@orange:          darken( saturate( #b65611, @syntax-mix-color ), @syntax-mix-contrast ); // 09
-@light-orange:    darken( saturate( #cfb017, @syntax-mix-color ), @syntax-mix-contrast ); // 0A
-@green:           darken( saturate( #60ac39, @syntax-mix-color ), @syntax-mix-contrast ); // 0B
-@cyan:            darken( saturate( #1fad83, @syntax-mix-color ), @syntax-mix-contrast ); // 0C
-@blue:            darken( saturate( #6684e1, @syntax-mix-color ), @syntax-mix-contrast ); // 0D
-@purple:          darken( saturate( #b854d4, @syntax-mix-color ), @syntax-mix-contrast ); // 0E
-@dark-red:        darken( saturate( #d43552, @syntax-mix-color ), @syntax-mix-contrast ); // 0F
+@hue-5:   hsl(  5, 74%, 59%); // <-red 1
+@hue-5-2: hsl(344, 84%, 43%); // <-red 2
+
+@hue-6:   hsl(41, 99%, 30%); // <-orange 1
+@hue-6-2: hsl(41, 99%, 38%); // <-orange 2
